@@ -1,0 +1,833 @@
+@charset "UTF-8";
+@import 'var.less';
+/*---公共样式---*/
+.wrap{
+    width:100%;
+}
+/*--欢迎页--*/
+.welcome{
+    width: 100vw;
+    height: 100vh;
+    background-color: @color-red;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position:relative;
+    .container{
+        text-align:center;
+        position:absolute;
+        left:10%;
+        top:0;
+        .title{
+            margin-top:15vh;
+            color:#fff;
+            font-size:2em;
+            text-align:center;
+        }
+        .toIndex{
+            display:block;
+            margin:15vh auto 0;
+            color:#fff;
+            font-size:1.1em;
+            text-align:center;
+            border:1px solid #fff;
+            border-radius:4px;
+        }
+    }
+
+}
+/*--弹窗客服--*/
+.Smodal{
+    position:fixed;
+    z-index:99999;
+    background:url('../images/combg.jpg') no-repeat;
+    background-size:cover;
+    display:none;
+    .Smodal-header{
+        color:@color-white;
+        .Sclose{
+            color:@color-white;
+        }
+    }
+    .Smodal-body{
+        background: url(../images/otherimg.png) no-repeat 8% bottom;
+        padding-left:35%;
+    }
+
+}
+
+/*---头部---*/
+header.wrap {
+    background:@color-red;
+    .head{
+        position:relative;
+        .logo{
+            position:absolute;
+            top:0;
+            left:0;
+            z-index:3;
+            img{
+                width:85%;
+                height:85%;
+            }
+        }
+        .nav li{
+            a{
+                color:@color-white;
+            }
+        }
+    }
+}
+
+/*--轮播图--*/
+.swiper-container{
+    width:100%;
+    overflow:hidden;
+    .swiper-wrapper .swiper-slide a{
+        display:block;
+        width:100%;
+        height:100%;
+        img{
+            width:100%;
+            height:100%;
+            max-width:100%;
+        }
+    }
+}
+.pagination{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    text-align:center;
+    width:100%;
+    z-index:10;
+}
+.swiper-pagination-switch{
+    display:inline-block;
+    background:@color-gray;
+    border-radius:0;
+    transition: width .2s ease;
+    -moz-transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+    -o-transition: width .2s ease;
+
+
+}
+.swiper-active-switch{
+    background:@color-red;
+}
+
+.swiper-container:hover .swiper-button-prev{
+    background:url('../images/arrow-left.png') no-repeat;
+    background-size:cover;
+}
+
+.swiper-container:hover .swiper-button-next{
+    background:url('../images/arrow-right.png') no-repeat;
+    background-size:cover;
+}
+
+/*--关于光头佬--*/
+.about{
+    //padding:80px 0;
+    background:@color-white;
+
+    .container{
+        /*--企业文化,荣誉,发展历程--*/
+        .about-contain{
+            .about-title{
+            }
+            .contain-wrap{
+                .contain-nav{
+                    li{
+                        color:@color-gray;
+                        i{
+                            display:inline-block;
+                            background:@color-gray;
+                            vertical-align: middle;
+                        }
+                        span{
+                            display:inline-block;
+                        }
+                        &.active{
+                            color:@color-red;
+                            i{
+                                background:@color-red;
+                            }
+                        }
+                    }
+
+                }
+                .contain-main{
+                    display: table;
+                    overflow-y:hidden;
+                    .contain-list{
+                        color:@color-black;
+                        display: table-cell;
+                        vertical-align: middle;
+                        position:relative;
+                        .look-more{
+                            color:@color-gray;
+                            position: absolute;
+                        }
+                        &.honor{
+                            background:url(../images/HomeHonour.png) no-repeat right bottom;
+                            background-size: 60% 107%;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+/*--产品推荐--*/
+.produce-wrap{
+    background:url('../images/produce-bg.jpg') no-repeat center;
+    background-size:100% 100%;
+    position:relative;
+    mark{
+        width:100%;
+        height:100%;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:1;
+        background: rgba(0,0,0,.4);
+    }
+    .container{
+        text-align:center;
+        position:relative;
+        .produce-title{
+            position:relative;
+            z-index:2;
+            img{
+                vertical-align: middle;
+            }
+            a{
+                color:@color-gray;
+                position:absolute;
+                right:0;
+            }
+        }
+        #imageFlow {
+            position: absolute;
+            width: 100%;
+            height: 117%;
+            left: 0%;
+            top: 28%;
+            z-index:3;
+            overflow:hidden !important;
+            .imagesBtn{
+                width:100%;
+                text-align:center;
+                position:absolute;
+                bottom:10%;
+                vertical-align: middle;
+                span.btnItem{
+                    display:inline-block;
+                    background: @color-gray;
+                    transition: width .2s ease;
+                    &.active{
+                        background: @color-red;
+                    }
+                }
+            }
+        }
+        #imageFlow .diapo {
+            position: absolute;
+            left: -1000px;
+            cursor: pointer;
+            -ms-interpolation-mode: nearest-neighbor;
+
+        }
+        #imageFlow .link {
+            border: dotted #fff 1px;
+            margin-left: -1px;
+            margin-bottom: -1px;
+        }
+        #imageFlow .bank {
+            visibility: hidden;
+        }
+
+        #imageFlow .arrow-left {
+            position: absolute;
+            left:0;
+        }
+        #imageFlow .arrow-right {
+            position: absolute;
+            right: 0px;
+        }
+
+    }
+}
+
+/*-- 公司活动 行业资讯--*/
+.infomation{
+    .container{
+        .act-title{
+            position:relative;
+            .more{
+                color:@color-gray;
+                position:absolute;
+            }
+        }
+        .com-act{
+            .active-show{
+                .active-list{
+                    position:relative;
+                    float:left;
+                    a{
+                        display:block;
+                        width:100%;
+                        height:100%;
+                        img{
+                            width:100%;
+                            height:100%;
+                        }
+                    }
+                    .active-state{
+                        display:block;
+                        width:100%;
+                        //height:0px;
+                        transition: height .3s ease;
+                        background:rgba(0,0,0,.5);
+                        position:absolute;
+                        left:0;
+                        bottom:0;
+                        cursor: pointer;
+                        p,time{
+                            width:100%;
+                            line-height:15px;
+                            font-size: @font-size12;
+                            color:@color-white;
+                            margin:0;
+                            padding:5px 15px 0 ;
+                        }
+                    }
+                    &:hover .active-state{
+                        //height:40px;
+                    }
+
+                }
+            }
+        }
+        .industries{
+            //width:34%;
+            .industries-list{
+                width:100%;
+                //height:220px;
+                background:@backgroung-color;
+                padding:3px;
+                figure{
+                    line-height:27px;
+                    background:#ffffff;
+                    padding:0 20px;
+                    box-sizing: border-box;
+                    transition: padding .2s ease;
+                    &:last-child{
+                        line-height:26px;
+                    }
+                    a{
+                        font-size:@font-size12;
+                        color:@color-black;
+                    }
+                    figcaption{
+                        width:73%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space:nowrap;
+                    }
+                    time{
+
+                        width:25%;
+                    }
+                    &:hover{
+                        padding-left:30px;
+
+                    }
+                    &:hover a{
+                        color:@color-gray;
+                    }
+
+                }
+
+            }
+        }
+    }
+}
+
+
+/*----分割线----*/
+/*--关于光头佬页--*/
+/*--发展历程时间轴--*/
+.cd-horizontal-timeline {
+  opacity: 0;
+  margin: 2em auto;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.cd-horizontal-timeline::before {
+  /* never visible - this is used in jQuery to check the current MQ */
+  content: 'mobile';
+  display: none;
+}
+.cd-horizontal-timeline.loaded {
+  /* show the timeline after events position has been set (using JavaScript) */
+  opacity: 1;
+}
+.cd-horizontal-timeline .timeline {
+  position: relative;
+  height: 70px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.cd-horizontal-timeline .events-wrapper {
+  position: relative;
+  height: 100%;
+  margin: 0 40px;
+  overflow: hidden;
+}
+.cd-horizontal-timeline .events-wrapper::after, .cd-horizontal-timeline .events-wrapper::before {
+  /* these are used to create a shadow effect at the sides of the timeline */
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  height: 100%;
+  width: 20px;
+}
+.cd-horizontal-timeline .events-wrapper::before {
+  left: 0;
+  background-image: -webkit-linear-gradient( left , #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0));
+}
+.cd-horizontal-timeline .events-wrapper::after {
+  right: 0;
+  background-image: -webkit-linear-gradient( right , #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0));
+}
+.cd-horizontal-timeline .events {
+  /* this is the grey line/timeline */
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 35px;
+  height: 2px;
+  /* width will be set using JavaScript */
+  background: #dfdfdf;
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+}
+.cd-horizontal-timeline .filling-line {
+  /* this is used to create the green line filling the timeline */
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: @color-red;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -ms-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+.cd-horizontal-timeline .events a {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  text-align: center;
+  font-size:@font-size12;
+  padding-bottom: 15px;
+  color: #383838;
+  /* fix bug on Safari - text flickering while timeline translates */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.cd-horizontal-timeline .events a::after {
+  /* this is used to create the event spot */
+  content: '';
+  position: absolute;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: -5px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  border: 2px solid #dfdfdf;
+  background-color: #f8f8f8;
+  -webkit-transition: background-color 0.3s, border-color 0.3s;
+  -moz-transition: background-color 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.no-touch .cd-horizontal-timeline .events a:hover::after {
+  background-color: @color-red;
+  border-color: @color-red;
+}
+.cd-horizontal-timeline .events a.selected {
+  pointer-events: none;
+}
+.cd-horizontal-timeline .events a.selected::after {
+  background-color: @color-red;
+  border-color: @color-red;
+}
+.cd-horizontal-timeline .events a.older-event::after {
+  border-color: @color-red;
+}
+@media only screen and (min-width: 1100px) {
+
+  .cd-horizontal-timeline::before {
+    /* never visible - this is used in jQuery to check the current MQ */
+    content: 'desktop';
+  }
+}
+
+.cd-timeline-navigation a {
+  /* these are the left/right arrows to navigate the timeline */
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  border: 2px solid #dfdfdf;
+  /* replace text with an icon */
+  overflow: hidden;
+  color: transparent;
+  text-indent: 100%;
+  white-space: nowrap;
+  -webkit-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+.cd-timeline-navigation a::after {
+  /* arrow icon */
+  content: '';
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(../images/arrow.png) no-repeat 5px 0;
+}
+.cd-timeline-navigation a.prev {
+  left: 0;
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  -moz-transform: translateY(-50%) rotate(180deg);
+  -ms-transform: translateY(-50%) rotate(180deg);
+  -o-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+.cd-timeline-navigation a.next {
+  right: 0;
+}
+.no-touch .cd-timeline-navigation a:hover {
+  border-color: @color-red;
+}
+.cd-timeline-navigation a.inactive {
+  cursor: not-allowed;
+}
+.cd-timeline-navigation a.inactive::after {
+  background-position: 4px -21px;
+}
+.no-touch .cd-timeline-navigation a.inactive:hover {
+  border-color: #dfdfdf;
+}
+
+.cd-horizontal-timeline .events-content {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  -webkit-transition: height 0.4s;
+  -moz-transition: height 0.4s;
+  transition: height 0.4s;
+}
+.cd-horizontal-timeline .events-content li {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  top: 0;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  opacity: 0;
+  -webkit-animation-duration: 0.4s;
+  -moz-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+.cd-horizontal-timeline .events-content li.selected {
+  /* visible event content */
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+.cd-horizontal-timeline .events-content li.enter-right, .cd-horizontal-timeline .events-content li.leave-right {
+  -webkit-animation-name: cd-enter-right;
+  -moz-animation-name: cd-enter-right;
+  animation-name: cd-enter-right;
+}
+.cd-horizontal-timeline .events-content li.enter-left, .cd-horizontal-timeline .events-content li.leave-left {
+  -webkit-animation-name: cd-enter-left;
+  -moz-animation-name: cd-enter-left;
+  animation-name: cd-enter-left;
+}
+.cd-horizontal-timeline .events-content li.leave-right, .cd-horizontal-timeline .events-content li.leave-left {
+  -webkit-animation-direction: reverse;
+  -moz-animation-direction: reverse;
+  animation-direction: reverse;
+}
+.cd-horizontal-timeline .events-content li > * {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.cd-horizontal-timeline .events-content h2 {
+  font-weight: bold;
+  font-size: 2.6rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.cd-horizontal-timeline .events-content em {
+  display: block;
+  font-style: italic;
+  margin: 10px auto;
+}
+.cd-horizontal-timeline .events-content em::before {
+  content: '- ';
+}
+.cd-horizontal-timeline .events-content p {
+  font-size: 1.4rem;
+  color: #959595;
+}
+.cd-horizontal-timeline .events-content em, .cd-horizontal-timeline .events-content p {
+  line-height: 1.6;
+}
+
+
+@-webkit-keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+  }
+}
+@-moz-keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0%);
+  }
+}
+@keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+  }
+}
+@-moz-keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0%);
+  }
+}
+@keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+
+
+/*---分割线--*/
+/*--新闻详情--*/
+/*--分享样式--*/
+.share{
+    width:100%;
+    margin:30px 0;
+    .bdsharebuttonbox{
+        .bds_more{
+            background-image:url(../images/share-icon.png);
+            float:left;
+            padding-left:27px;
+            height:20px;
+            line-height:20px;
+            margin-top:10px;
+            margin-right:15px;
+        }
+        .share-icon{
+            cursor: pointer;
+            display:inline-block;
+            width:50px;
+            text-align:center;
+            a{
+                display:block;
+                float:none;
+                margin:0;
+                margin-left:15px;
+
+            }
+            i{
+                display:block;
+                font-size:@font-size12;
+                color:#666;
+            }
+        }
+    }
+}
+
+/*----分割线----*/
+/*--加入光头佬页--*/
+#JoinUs{
+    text-align:center;
+    .join-con{
+        .small-title{
+            color:@color-white;
+            background: @color-red;
+            margin:0 auto;
+        }
+        .has-error .form-control{
+            border-color:@color-red;
+        }
+        .form-control{
+            border: 1px solid @color-gray;
+        }
+        textarea{
+            outline: none;
+            border: 1px solid @color-gray;
+            text-align: left;
+            border-radius: 4px;
+            display: block;
+        }
+        .error .valid_message{
+            color:@color-red;
+        }
+        .valid_message{
+            color:@color-red;
+        }
+        .btn{
+            background: @color-red;
+            color:@color-white;
+            outline: none;
+        }
+
+    }
+}
+
+
+/*--改变select选择框的默认样式---*/
+select {
+  /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+  border: solid 1px @color-gray;
+
+  /*很关键：将默认的select选择框样式清除*/
+  // appearance:none;
+  // -moz-appearance:none;
+  // -webkit-appearance:none;
+
+  /*在选择框的最右侧中间显示小箭头图片*/
+    background-image: url("../images/select-arrow.png") no-repeat right center;
+  background-color:@color-white;
+
+
+  /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+  padding-right: 14px;
+}
+
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+//select::-ms-expand { display: none; }

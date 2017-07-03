@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no，minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="Author" content="Calvin,stella-ning">
+	<title>产品介绍</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" media="screen and (min-width:980px)" href="css/pc.css"><!--大于980px的时候-->
+	<link rel="stylesheet" media="screen and (max-width:780px)" href="css/mobile.css"><!--手机的时候-->
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/rem.js"></script>
+    <script src="js/swiper.min.js"></script>
+	<script src="js/index.js"></script>
+</head>
+
+<body>
+
+	<!-- 头部 -->
+	<header class="wrap">
+		<div class="head container clearfix">
+			<div class="logo">
+				<a href=""><img src="images/PClogo.png" alt="" ></a>
+			</div>
+            <div class="openNav" id="openNav">
+                <img src="images/nav-icon.png" alt="">
+            </div>
+            <ul class="nav fr" id="nav">
+				<li><a href="index.html">首页</a></li>
+				<li ><a href="about.html">关于光头佬</a></li>
+				<li class="hover"><a href="produce.html">产品介绍</a></li>
+				<li><a href="news-actives.html">新闻和活动</a></li>
+				<li><a href="infomation.html">行业资讯</a></li>
+				<li><a href="join.html">加入我们</a></li>
+			</ul>
+		</div>
+	</header>
+
+    <!-- 产品介绍 -->
+    <div class="wrap ProduceIntro" id="ProduceIntro">
+        <div class="ProduceIntro-title">
+            <img src="images/ProduceIntro.png" alt="">
+        </div>
+        <div class="container">
+            <!-- tab按钮 -->
+            <div class="tabBtn" id="tabBtn">
+                <input type="hidden" id="type">
+                <ul class="clearfix">
+                    <li class="active" id="dessert" data-url="data/dessert.json"  data-type="dessert">
+                        <img src="images/category-dessert.png" alt="点心系列">
+                        <p>点心系列</p>
+                    </li>
+                    <li id="bread" data-url="data/bread.json"  data-type="bread">
+                        <img src="images/category-bread.png" alt="包点系列">
+                        <p>包点系列</p>
+                    </li>
+                    <li id="cake" data-url="data/cake.json"  data-type="cake">
+                        <img src="images/category-cake.png" alt="糕点系列">
+                        <p>糕点系列</p>
+                    </li>
+                    <li id="cake" data-url="data/cake.json"  data-type="cake">
+                        <img src="images/category-cake.png" alt="糕点系列">
+                        <p>香煎系列</p>
+                    </li>
+                    <li id="cake" data-url="data/cake.json"  data-type="cake">
+                        <img src="images/category-cake.png" alt="糕点系列">
+                        <p>小吃系列</p>
+                    </li>
+                    <li id="cake" data-url="data/cake.json"  data-type="cake">
+                        <img src="images/category-cake.png" alt="糕点系列">
+                        <p>养生汤系列</p>
+                    </li>
+                    <li id="cake" data-url="data/cake.json"  data-type="cake">
+                        <img src="images/category-cake.png" alt="糕点系列">
+                        <p>饮品系列</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- tab内容 -->
+            <div class="tabCon" id="tabCon">
+                <div class="tabConList dessert" style="display:block;">
+                    <ul class="proList  clearfix">
+                        <li class="active-list">
+                            <a href="produce-detail.html">
+                                <img src="images/produce04.jpg" alt="">
+                            </a>
+                            <figure class="produce-state">
+                                <p>激情七载，感恩风雨同舟</p>
+                            </figure>
+                        </li>
+                        <li class="active-list">
+                            <a href="">
+                                <img src="images/produce02.jpg" alt="">
+                            </a>
+                            <figure class="produce-state">
+                                <p>激情七载，感恩风雨同舟</p>
+                            </figure>
+                        </li>
+                        <li class="active-list">
+                            <a href="">
+                                <img src="images/produce03.jpg" alt="">
+                            </a>
+                            <figure class="produce-state">
+                                <p>激情七载，感恩风雨同舟</p>
+                            </figure>
+                        </li>
+                        <li class="active-list">
+                            <a href="">
+                                <img src="images/produce01.jpg" alt="">
+                            </a>
+                            <figure class="produce-state">
+                                <p>激情七载，感恩风雨同舟</p>
+                            </figure>
+                        </li>
+                    </ul>
+                    <div class="loadMore">
+                        <button type="button" name="button" data-type="dessert">加载更多</button>
+                    </div>
+                </div>
+                <div class="tabConList bread" style="display:none;">
+                    <ul class="proList  clearfix"></ul>
+                    <div class="loadMore">
+                        <button type="button" name="button" data-type="bread">加载更多</button>
+                    </div>
+                </div>
+                <div class="tabConList cake" style="display:none;">
+                    <ul class="proList  clearfix"></ul>
+                    <div class="loadMore">
+                        <button type="button" name="button" data-type="cake">加载更多</button>
+                    </div>
+                </div>
+                <div class="tabConList fried" style="display:none;">
+                    <ul class="proList  clearfix"></ul>
+                    <div class="loadMore">
+                        <button type="button" name="button" data-type="cake">加载更多</button>
+                    </div>
+                </div>
+                <div class="tabConList snack" style="display:none;">
+                    <ul class="proList  clearfix"></ul>
+                    <div class="loadMore">
+                        <button type="button" name="button" data-type="cake">加载更多</button>
+                    </div>
+                </div>
+                <div class="tabConList soup" style="display:none;">
+                    <ul class="proList  clearfix"></ul>
+                    <div class="loadMore">
+                        <button type="button" name="button" data-type="cake">加载更多</button>
+                    </div>
+                </div>
+                <div class="tabConList drink" style="display:none;">
+                    <ul class="proList  clearfix"></ul>
+                    <div class="loadMore">
+                        <button type="button" name="button" data-type="cake">加载更多</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 底部 -->
+    <footer class="wrap footer">
+        <div class="container clearfix">
+            <div class="foot-logo fl">
+                <a href="">
+                    <img src="images/footer-logo.png" alt="">
+                </a>
+            </div>
+            <div class="foot-con fr">
+                <div class="foot-nav">
+                    <a href="">
+                        首页
+                    </a>
+                    <a href="">
+                        关于我们
+                    </a>
+                    <a href="">
+                        特色点心
+                    </a>
+                    <a href="">
+                        公司活动
+                    </a>
+                    <a href="">
+                        行业资讯
+                    </a>
+                    <a href="">
+                        加入我们
+                    </a>
+                </div>
+                <div class="join-tel">
+                    <a href="">
+                        <img src="images/tel.png" alt="">
+                    </a>
+                </div>
+                <div class="con-info">
+                    <p>(C)2015 版权所有 真功夫餐饮管理有限公司</p>
+                    <p>粤ICP备13066649号-1</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 移动端固定底部 -->
+    <div class="fixed-footer">
+        <span>
+            <a href="">在线咨询</a>
+        </span>
+        <span>
+            <em>加盟热线</em>
+        </span>
+    </div>
+
+    <script>
+        $(function(){
+            //第一个默认是true,因为第一个是默认加载的
+            var cache = {"hash0":true,"hash1":false,"hash2":false};
+            //ajax请求函数封装
+            function renderData(type,wrapper){
+                $.getJSON("data/"+type+".json",{id:type},function(data){
+                    $.each(data,function(i,value){
+                        wrapper.append(
+                            '<li class="active-list"><a href="'+data[i].href+'"><img src="'+data[i].src+'" alt=""></a><figure class="produce-state"><p>'+data[i].title+'</p></figure></li>'
+                        );
+                    });
+                });
+            }
+            // tab切换
+            $('#tabBtn ul li').on('click',function(){
+                var type = $(this).data('type'),
+                    $url = $(this).data('url'),
+                    index = $(this).index(),
+                    $tabCon = $('#tabCon .tabConList').eq(index),
+                    $proList = $tabCon.find(".proList");
+                $(this).addClass('active').siblings().removeClass('active');
+                $tabCon.show().siblings().hide();
+                console.log(!cache["hash"+index]);
+                if(!cache["hash"+index]){
+                    cache["hash"+index] = true;
+                    console.log(!cache["hash"+index]);
+                    renderData(type, $proList);
+                }
+            });
+            //加载更多
+            $("#tabCon button").on("click", function(){
+                renderData($(this).data("type"), $(this).parent().prev(".proList"));
+            });
+        })
+    </script>
+</body>
+</html>
